@@ -64,6 +64,19 @@ nav ul a:hover {
 	/* border: 1px solid #000; */
 	outline: none;
 	border-radius: 20px;
+	position: relative;
+}
+
+.category-buttons button::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	border-radius: 20px;
+	z-index: -5;
+	top: 10%;
+	left: 5%;
 }
 
 .category-buttons button.active {
@@ -72,16 +85,18 @@ nav ul a:hover {
 
 .gallery {
 	display: flex;
+	flex-direction: column;
+	height: 700px;
 	flex-wrap: wrap;
 	gap: 10px 1%;
 	background-color: orangered;
 }
 
 .image-wrapper {
-	/* width: 24.25%; */
+	width: 24.25%;
 	/* flex: 1; */
 	flex: 1 0 auto;
-	height: 200px;
+	/* height: 200px; */
 }
 
 img {
